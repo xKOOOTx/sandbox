@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #202020;
+}
+
+.wrapper {
+    display: flex;
+    width: 348px;
+}
+.main {
+    width: 260px;
+    margin: 0;
+    position: relative;
+    align-self: center;
+}
+
+#selectorValue {
+    width: 80px;
+    height: 36px;
+    padding-left: 16px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #202020;
+    background: #F1F1F1;
+}
+
+#slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+#selector {
+    height: 104px;
+    width: 12px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.selectorBtn {
+    height: 12px;
+    width: 12px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 22px;
+}
+
+#progressBar {
+    width: 50%;
+    height: 7px;
+    background: #ffd200;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
