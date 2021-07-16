@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  display: block;
+  outline: none;
+}
+
+.form {
+  &__input {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    &:focus,
+    &:active {
+      border-color: #000000;
+      box-shadow: 0 0 5px 5px rgba(#000000, .2);
+    }
+    &._error {
+      border-color: red;
+      box-shadow: 0 0 5px 5px rgba(red, .2);
+    }
+  }
+  &__submitBtn {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background: #cccccc;
+    color: black;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#ffffff, .9) url('./Radio-1s-200px.gif') center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease-in-out;
+  }
+  &._sending:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
